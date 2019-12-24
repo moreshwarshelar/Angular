@@ -1,0 +1,83 @@
+.userData{
+    padding: 15px;
+    background-color: rgba(245, 250, 255, 1);
+    min-height: 548px;
+}
+
+.userTable{
+    font-size: 11px;
+}
+.userTable th{
+    font-weight: normal;
+}
+.tableTitle{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.counter{
+    width: 100%;
+    margin-bottom: 33px;
+}
+.counter > div{
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 11px;
+    width: 14%;
+    cursor: pointer;
+}
+
+.fColor{    
+    color: gray !important;
+}
+
+.counter > div > div > span{
+    float: right;
+    margin-top: 2%;
+}
+.counter > div:nth-child(1){
+    color:rgba(85, 85, 85, 1);
+}
+.counter > div:nth-child(2){
+    color:rgba(255, 182, 70, 1);
+}
+.counter > div:nth-child(3){
+    color:rgba(255, 160, 95, 1);
+}
+.counter > div:nth-child(4){
+    color:rgba(89, 189, 208, 1);
+}
+.counter > div:nth-child(5){
+    color:rgba(35, 181, 229, 1);
+}
+.counter > div:nth-child(6){
+    color:rgba(193, 217, 148, 1);
+}
+.counter > div:nth-child(7){
+    color:rgba(53, 203, 93, 1);
+}
+.counter > div:nth-child(8){
+    color:rgba(109, 159, 209, 1);
+}
+.counter > div:nth-child(9){
+    color:black;
+}
+.counter > div > div:nth-child(1){    
+    font-size: 30px;
+}
+.counter > div > div:nth-child(2){    
+    white-space:nowrap;
+    border-bottom: 1px solid;
+    padding: 2px;
+}
+.table > tbody > tr > td{
+    border-top: 0.1px solid rgba(186, 188, 188, 0.1);
+}
+.table > thead > th {
+    border-bottom: 0.1px solid rgba(186, 188, 188, 1);
+    padding: 4px 12px;
+}
+.btnBack{
+    margin-right: 15px;
+    background-color: rgba(90, 128, 165, 1);
+    color: white;
+}

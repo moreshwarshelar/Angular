@@ -1,0 +1,71 @@
+
+<div class='table-responsive userData'>
+  <div class="counter" >
+    <div (click)="filter('Prospect')">
+      <div>{{getCount('Prospect') | number : '2.0-2' }}</div>
+      <div>Prospect <span class="glyphicon glyphicon-ok-circle" [ngClass]="noFilter == 'Prospect'? '' : 'fColor'"></span></div>
+    </div>
+    <div (click)="filter('New Deal')">
+       <div>{{getCount('New Deal') | number : '2.0-2' }}</div>
+       <div>New Deals <span class="glyphicon glyphicon-ok-circle" [ngClass]="noFilter == 'New Deal'? '' : 'fColor'"></span></div>
+     </div>
+     <div (click)="filter('Under Consideration')">
+       <div>{{getCount('Under Consideration') | number : '2.0-2' }}</div>
+       <div>Under Consideration <span class="glyphicon glyphicon-ok-circle" [ngClass]="noFilter == 'Under Consideration'? '' : 'fColor'"></span></div>
+     </div>
+     <div (click)="filter('LOI')">
+       <div>{{getCount('LOI') | number : '2.0-2' }}</div>
+       <div>LOI <span class="glyphicon glyphicon-ok-circle" [ngClass]="noFilter == 'LOI'? '' : 'fColor'"></span></div>
+     </div>
+     <div (click)="filter('Awarded')">
+       <div>{{getCount('Awarded') | number : '2.0-2' }}</div>
+       <div>Awarded <span class="glyphicon glyphicon-ok-circle" [ngClass]="noFilter == 'Awarded'? '' : 'fColor'"></span></div>
+     </div>
+     <div (click)="filter('Closed')">
+         <div>{{getCount('Closed') | number : '2.0-2' }}</div>
+         <div>Closed <span class="glyphicon glyphicon-ok-circle" [ngClass]="noFilter == 'Closed'? '' : 'fColor'"></span></div>
+     </div>
+     <div (click)="filter('Onboarded')">
+       <div>{{getCount('Onboarded') | number : '2.0-2' }}</div>
+       <div>Onboarded <span class="glyphicon glyphicon-ok-circle" [ngClass]="noFilter == 'Onboarded'? '' : 'fColor'"></span></div>
+     </div>
+  </div>
+  <table class='table userTable' >
+    <thead>
+      <th>Deal Name</th>
+      <th>Deal Address</th>
+      <th>Fund Name</th>
+      <th>Property Name</th>
+      <th>Deal Stage</th>
+      <th>Deal Status</th>
+      <th>Deal Type</th>
+      <th>MNPI Status</th>
+      <th>Primary Acquisition Officer</th>
+      <th>Market</th>
+      <th>Sub Market</th>
+      <th>Property Region</th>
+      <th>TIAA Valuation</th>
+      <th>SF/Unit</th>
+      <th>Investment ID</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of spList">
+          <td>{{item?.Title}}</td>
+          <td>{{item?.Address}}</td>
+          <td>{{item?.FundName}}</td>
+          <td>{{item?.PropertyType}}</td>
+          <td>{{item?.DealStage}}</td>
+          <td>{{item?.DealStatus}}</td>
+          <td>{{item?.DealType}}</td>
+          <td>{{item?.MNPIStatus}}</td>
+          <td>{{item?.PrimaryAcquisitionOfficer}}</td>
+          <td>{{item?.Market}}</td>
+          <td>{{item?.SubMarket}}</td>
+          <td>{{item?.PropertyRegion}}</td>
+          <td>{{item?.TIAAValuation}}</td>
+          <td>{{item?.SFUnit}}</td>
+          <td>{{item?.InvestmentID}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

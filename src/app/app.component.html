@@ -1,0 +1,48 @@
+<div class="container">
+  <nav class="navbar navbar-inverse navbarColor"  *ngIf="loggedIn">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      </div>
+      <div class="col-md-7 mb-3 search">
+          <select class="form-control" >
+              <option selected>All Deals</option>
+              <option value="1">Active Deals</option>
+              <option value="2">Closed Deals</option>
+            </select>
+          <input type="text" class="form-control" placeholder="Deal Name">
+          <div class="searchIcon"><span class="glyphicon glyphicon-search"></span></div>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><div class="top-left"></div></li>
+        <li><span class="glyphicon glyphicon-log-out logOut" (click)="logout()"></span></li>
+      </ul>
+    </div>
+  </nav>
+ 
+ <div class="row contentRow"  *ngIf="loggedIn">
+  <div class="col-sm-1 leftColumn">
+      <ul class="leftNav">        
+        <li routerLinkActive="active" ng-class="getClass('home')"><span class="glyphicon glyphicon-home"></span><br/><a [routerLink]="['home']"> Home</a></li>
+        <li routerLinkActive="active" ng-class="getClass('userProfile')"><span class="glyphicon glyphicon-user"></span><br/><a [routerLink]="['userProfile']">Profile</a></li>
+        <li routerLinkActive="active" ng-class="getClass('SPapiList')"><span class="glyphicon glyphicon-folder-open SPapiList"></span><br/><a [routerLink]="['SPapiList']">Deals</a></li>
+        <li routerLinkActive="active" ng-class="getClass('todoList')"><span class="glyphicon glyphicon-list-alt"></span><br/><a [routerLink]="['todoList']">List</a></li>
+        <li routerLinkActive="active" ng-class="getClass('spList')"><span class="glyphicon glyphicon-globe"></span><br/><a [routerLink]="['spList']">REST API</a></li>
+       </ul>
+  </div>
+  <div class="col-sm-auto">      
+      <router-outlet *ngIf="!isIframe"></router-outlet>
+  </div>
+ </div>
+  <div class="row" *ngIf="!loggedIn" class="loginBackground">
+      <div class="login">
+        <div class="loginTitle">Nuveen Demo - Angular</div>
+        <div class="loginBox">
+        You are not logged in, Please Login!!<hr>
+        <a (click)="login()"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+      </div>
+      </div>
+    </div>
+
+  <!--This is to avoid reload during acquireTokenSilent() because of hidden iframe -->
+
+</div>

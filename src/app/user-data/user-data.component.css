@@ -1,0 +1,12 @@
+.userData{
+    padding: 15px;
+    background-color: rgba(245, 250, 255, 1);
+    min-height: 548px;
+}
+.userTable{
+    background-color: white;
+}
+.tableTitle{
+    font-size: 20px;
+    margin-bottom: 10px;
+}

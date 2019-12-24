@@ -1,0 +1,32 @@
+<div class='table-responsive userData documents'>
+    <div class="tableTitle" >Deal Documents</div>
+    <table class='table table-striped userTable' >
+      <thead>
+        <th>Document Name</th>
+        <th>Created</th>
+        <th>Created By</th>
+        <th>Modified</th>
+        <th>Modified By</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of dealDocuments">
+            <td><a href="{{item.url}}">{{item?.title}}</a></td>
+            <td>{{item?.created}}</td>
+            <td>{{item?.createdBy}}</td>
+            <td>{{item?.modified}}</td>
+            <td>{{item?.lastModifiedBy}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="docSection">
+        <div class="form-group">
+            <label for="file">Choose File</label>
+            <input style="width: 100%;" type="file" id="file" (change)="handleFileInput($event.target.files)"/>
+        </div>
+        <div>
+          <a class='btn btn-default btnBack' (click)="uploadFileToActivity()">Upload Document </a>
+          <a class='btn btn-default btnBack' (click)="onBack()">Back </a>
+        </div>
+      </div>
+</div>
